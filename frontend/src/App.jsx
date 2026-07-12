@@ -1,17 +1,20 @@
+import Hero from "./components/home/Hero";
+import Features from "./components/home/Features";
+import HowItWorks from "./components/home/HowItWorks";
+import Testimonials from "./components/home/Testimonials";
+import CTA from "./components/home/CTA";
+import Footer from "./components/layout/Footer";
+
 function App() {
   return (
-    <div className="min-h-screen bg-slate-100 flex flex-col items-center justify-center px-6">
-      <h1 className="text-5xl font-bold text-blue-600">Charcha</h1>
-
-      <p className="mt-4 text-2xl text-gray-700">
-        AI-Powered Digital Wellbeing Platform
-      </p>
-
-      <p className="mt-6 max-w-2xl text-center text-lg text-gray-600">
-        Understand your digital habits, discover personalized insights, and
-        build a healthier relationship with social media using AI.
-      </p>
-    </div>
+    <>
+      <Hero />
+      <Features />
+      <HowItWorks />
+      <Testimonials />
+      <CTA />
+      <Footer />
+    </>
   );
 }
 
