@@ -4,7 +4,10 @@ import logo from "../../assets/logo.png";
 
 function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 px-6">
+    <section
+      id="home"
+      className="min-h-screen pt-36 lg:pt-40 flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 px-6"
+    >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
         {/* ================= LEFT SIDE ================= */}
 
@@ -21,7 +24,7 @@ function Hero() {
 
           {/* Heading */}
 
-          <h1 className="mt-8 text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-slate-900">
+          <h1 className="text-5xl md:text-6xl lg:text-[5.2rem] max-w-xl font-extrabold leading-tight text-slate-900">
             Your AI Companion for
             <br />
             <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
@@ -45,14 +48,14 @@ function Hero() {
 
           {/* Buttons */}
 
-          <div className="flex flex-wrap gap-5 mt-10">
+          <div className="flex flex-wrap gap-5 mt-12">
             <button className="flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:scale-105 transition-all duration-300">
-              Start Assessment
+              Get Started
               <FaArrowRight />
             </button>
 
             <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 hover:text-white hover:scale-105 transition-all duration-300">
-              Explore Features
+              Learn More
             </button>
           </div>
 
@@ -99,7 +102,7 @@ function Hero() {
           <img
             src={logo}
             alt="Charcha Logo"
-            className="w-72 md:w-80 lg:w-[460px] drop-shadow-2xl"
+            className="w-80 md:w-[430px] lg:w-[540px] drop-shadow-2xl"
           />
         </motion.div>
       </div>

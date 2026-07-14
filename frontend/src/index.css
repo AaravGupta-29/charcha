@@ -1,1 +1,17 @@
 @import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #2563eb;
+  color: white;
+}
