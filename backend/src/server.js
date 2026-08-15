@@ -6,6 +6,7 @@ import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import assessmentRoutes from "./routes/assessmentRoutes.js";
 import dashboardRoutes from "./routes/dashboardRoutes.js";
+import analyticsRoutes from "./routes/analyticsRoutes.js";
 
 dotenv.config();
 
@@ -35,9 +36,17 @@ app.get("/", (req, res) => {
 // API Routes
 // =======================
 
+// Authentication
 app.use("/api/auth", authRoutes);
+
+// Assessment
 app.use("/api/assessment", assessmentRoutes);
+
+// Dashboard
 app.use("/api/dashboard", dashboardRoutes);
+
+// Analytics
+app.use("/api/analytics", analyticsRoutes);
 
 // =======================
 // Server
