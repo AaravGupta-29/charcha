@@ -3,10 +3,12 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 import connectDB from "./config/db.js";
+
 import authRoutes from "./routes/authRoutes.js";
 import assessmentRoutes from "./routes/assessmentRoutes.js";
 import dashboardRoutes from "./routes/dashboardRoutes.js";
 import analyticsRoutes from "./routes/analyticsRoutes.js";
+import profileRoutes from "./routes/profileRoutes.js";
 
 dotenv.config();
 
@@ -47,6 +49,9 @@ app.use("/api/dashboard", dashboardRoutes);
 
 // Analytics
 app.use("/api/analytics", analyticsRoutes);
+
+// User Profile
+app.use("/api/profile", profileRoutes);
 
 // =======================
 // Server
