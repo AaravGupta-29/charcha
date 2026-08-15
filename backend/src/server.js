@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import assessmentRoutes from "./routes/assessmentRoutes.js";
+import dashboardRoutes from "./routes/dashboardRoutes.js";
 
 dotenv.config();
 
@@ -12,11 +13,17 @@ connectDB();
 
 const app = express();
 
+// =======================
 // Middleware
+// =======================
+
 app.use(cors());
 app.use(express.json());
 
+// =======================
 // Health Route
+// =======================
+
 app.get("/", (req, res) => {
   res.json({
     success: true,
@@ -24,9 +31,17 @@ app.get("/", (req, res) => {
   });
 });
 
-// Routes
+// =======================
+// API Routes
+// =======================
+
 app.use("/api/auth", authRoutes);
 app.use("/api/assessment", assessmentRoutes);
+app.use("/api/dashboard", dashboardRoutes);
+
+// =======================
+// Server
+// =======================
 
 const PORT = process.env.PORT || 5000;
 
