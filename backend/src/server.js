@@ -4,26 +4,19 @@ import dotenv from "dotenv";
 
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
+import assessmentRoutes from "./routes/assessmentRoutes.js";
 
 dotenv.config();
 
-// Connect to MongoDB
 connectDB();
 
 const app = express();
 
-// =======================
 // Middleware
-// =======================
-
 app.use(cors());
 app.use(express.json());
 
-// =======================
-// Routes
-// =======================
-
-// Health Check Route
+// Health Route
 app.get("/", (req, res) => {
   res.json({
     success: true,
@@ -31,12 +24,9 @@ app.get("/", (req, res) => {
   });
 });
 
-// Authentication Routes
+// Routes
 app.use("/api/auth", authRoutes);
-
-// =======================
-// Server
-// =======================
+app.use("/api/assessment", assessmentRoutes);
 
 const PORT = process.env.PORT || 5000;
 
